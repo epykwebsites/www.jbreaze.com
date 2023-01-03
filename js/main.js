@@ -120,7 +120,8 @@
 
     // Use this for real timer date
     //  timerdate = "yyyy/mm/dd";
-    var timerdate = "2022/07/17";
+    var year = new Date().getFullYear();
+    var timerdate = year  + "/07/17";
 
 	$("#countdown-time").countdown(timerdate, function(event) {
         $(this).html(event.strftime("<div class='countdown__item'><span>%D</span> <p>Days</p> </div>" + "<div class='countdown__item'><span>%H</span> <p>Hours</p> </div>" + "<div class='countdown__item'><span>%M</span> <p>Minutes</p> </div>" + "<div class='countdown__item'><span>%S</span> <p>Seconds</p> </div>"));
